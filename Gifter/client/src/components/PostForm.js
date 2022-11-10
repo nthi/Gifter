@@ -1,3 +1,37 @@
+import React, { useEffect, useState } from "react"
+import Post from "./Post";
+import { addPost } from "../modules/PostManager";
+
+const PostForm = () => {
+    const [title, setTitle] = useState("")
+    const [url, setUrl] = useState("")
+    const [caption, setCaption] = useState("")
+
+    const saveNewPost = () => {
+        const newPost = {
+            title: title,
+            imageUrl: url,
+            caption: caption,
+            userProfileId: 1,
+            dateCreated: new Date()
+        }
+        addPost(newPost)
+            // .then(getAllPosts)
+    }
+
+    return (
+        <>
+        <h1>Enter a new gif</h1>
+        <input type="text" placeholder="Title" onChange={(event) => setTitle(event.target.value)} />
+        <input type="text" placeholder="Image Url" onChange={(event) => setUrl(event.target.value)} />
+        <input type="text" placeholder="Caption" onChange={(event) => setCaption(event.target.value)} />
+        <button onClick={saveNewPost}>Submit</button>
+        </>
+    )
+}
+
+export default PostForm;
+
 //don't bother with bootstrap-- just use form tags
 
 // import { Button, Label, Form } from 'reactstrap';
