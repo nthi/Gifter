@@ -11,10 +11,17 @@ const Post = ({ post }) => {
           <strong>{post.title}</strong>
         </p>
         <p>{post.caption}</p>
-        <ul>
-        <h6>Comments</h6>
-        
-        </ul>
+          <article>
+            <ul>Comments:</ul>
+            {
+              post.comments?.map((comment) => (
+                <li>
+                  {comment.message}
+                </li>
+              ))
+
+            }
+          </article>
       </CardBody>
     </Card>
   );
