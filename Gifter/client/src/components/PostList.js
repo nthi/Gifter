@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Post from './Post';
-import { getAllPosts } from "../modules/PostManager";
+import { getAllPostsWithComments } from "../modules/PostManager";
 
 const PostList = () => {
   const [posts, setPosts] = useState([]);
 
   const getPosts = () => {
-    getAllPosts().then(allPosts => setPosts(allPosts));
+    getAllPostsWithComments().then(allPosts => setPosts(allPosts));
   };
 
 

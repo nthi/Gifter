@@ -2,7 +2,7 @@ import React from "react";
 
 const baseUrl = '/api/post';
 
-export const getAllPosts = () => {
+export const getAllPostsWithComments = () => {
   return fetch(baseUrl)
     .then((res) => res.json())
 };
@@ -15,4 +15,9 @@ export const addPost = (singlePost) => {
     },
     body: JSON.stringify(singlePost),
   });
+};
+
+export const getPostbyIdWithComments = (id) => {
+  return fetch(baseUrl)
+  .then((res) => res.json())
 };

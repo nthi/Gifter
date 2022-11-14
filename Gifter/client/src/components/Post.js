@@ -11,6 +11,10 @@ const Post = ({ post }) => {
           <strong>{post.title}</strong>
         </p>
         <p>{post.caption}</p>
+        <ul>
+        <h6>Comments</h6>
+        
+        </ul>
       </CardBody>
     </Card>
   );

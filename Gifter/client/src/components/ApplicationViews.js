@@ -11,7 +11,7 @@ const ApplicationViews = () => {
 
       <Route path="/posts/add" element={<PostForm />} />
 
-      {/* <Route path="/posts/:id" element={/* TODO: Post Details Component */} /> */}
+      <Route path="/posts/:id" element={<></>} />
 
       <Route path="*" element={<p>Whoops, nothing here...</p>} />
     </Routes>
