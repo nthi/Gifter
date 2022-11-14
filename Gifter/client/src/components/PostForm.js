@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react"
 import Post from "./Post";
 import { addPost } from "../modules/PostManager";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const PostForm = () => {
     const [title, setTitle] = useState("")
     const [url, setUrl] = useState("")
     const [caption, setCaption] = useState("")
 
+    const navigate = useNavigate();
+    
     const saveNewPost = () => {
         const newPost = {
             title: title,
@@ -15,8 +18,10 @@ const PostForm = () => {
             userProfileId: 1,
             dateCreated: new Date()
         }
-        addPost(newPost)
-            // .then(getAllPosts)
+        addPost(newPost).then((p) => {
+            navigate("/");
+        });
+    
     }
 
     return (
