@@ -13,6 +13,7 @@ const Post = ({ post }) => {
     <strong>{post.title}</strong>
 </Link>
         <p>{post.caption}</p>
+        {/* following is way to have comments inside post card. I've refactored b/c of setup in Details, but might want to revert to this. */}
           {/* <article>
             <ul>Comments:</ul>
             {
