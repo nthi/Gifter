@@ -7,6 +7,11 @@ export const getAllPostsWithComments = () => {
     .then((res) => res.json())
 };
 
+export const searchPosts = () => {
+  return fetch(`${baseUrl}/search`)
+  .then((res) => res.json())
+}
+
 export const addPost = (singlePost) => {
   return fetch(baseUrl, {
     method: "POST",
