@@ -8,7 +8,6 @@
 
 
   export const login = (userObject) => {
-    debugger;
     fetch(`api/userprofile/getbyemail?email=${userObject.email}`)
       .then((r) => r.json())
       .then((userObjFromDB) => {

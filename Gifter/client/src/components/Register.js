@@ -15,7 +15,8 @@ export const Register = () => {
   name: name,
   email: email,
   bio: bio,
-  imageurl: imageurl
+  imageurl: imageurl,
+  dateCreated: new Date()
   }
     e.preventDefault();
     register(newUser);
