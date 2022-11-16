@@ -1,38 +1,40 @@
-//after going through an auth process, logged in users see full header
 
-import React from "react";
-import { Link } from "react-router-dom";
 
-const Header = () => {
-  return (
-    <nav className="navbar navbar-expand navbar-dark bg-info">
-      <Link to="/" className="navbar-brand">
-        GiFTER
-      </Link>
-      <ul className="navbar-nav mr-auto">
-        <li className="nav-item">
-          <Link to="/" className="nav-link">
-            Feed
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/posts/add" className="nav-link">
-            New Post
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/login" className="nav-link">
-            Login
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/register" className="nav-link">
-            Register
-          </Link>
-        </li>
-      </ul>
-    </nav>
-  );
-};
+// //work on altering header so those not logged in only see logo, register, login links.
+
+// import React from "react";
+// import { Link } from "react-router-dom";
+
+// const Header = () => {
+//   return (
+//     <nav className="navbar navbar-expand navbar-dark bg-info">
+//       <Link to="/" className="navbar-brand">
+//         GiFTER
+//       </Link>
+//       <ul className="navbar-nav mr-auto">
+//         {/* <li className="nav-item">
+//           <Link to="/" className="nav-link">
+//             Feed
+//           </Link>
+//         </li>
+//         <li className="nav-item">
+//           <Link to="/posts/add" className="nav-link">
+//             New Post
+//           </Link>
+//         </li> */}
+//         <li className="nav-item">
+//           <Link to="/login" className="nav-link">
+//             Login
+//           </Link>
+//         </li>
+//         <li className="nav-item">
+//           <Link to="/register" className="nav-link">
+//             Register
+//           </Link>
+//         </li>
+//       </ul>
+//     </nav>
+//   );
+// };
 
 export default Header;

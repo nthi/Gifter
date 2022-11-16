@@ -1,5 +1,3 @@
-//work on altering header so those not logged in only see logo, register, login links.
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -10,7 +8,7 @@ const Header = () => {
         GiFTER
       </Link>
       <ul className="navbar-nav mr-auto">
-        {/* <li className="nav-item">
+        <li className="nav-item">
           <Link to="/" className="nav-link">
             Feed
           </Link>
@@ -19,8 +17,8 @@ const Header = () => {
           <Link to="/posts/add" className="nav-link">
             New Post
           </Link>
-        </li> */}
-        <li className="nav-item">
+        </li>
+        {/* <li className="nav-item">
           <Link to="/login" className="nav-link">
             Login
           </Link>
@@ -29,7 +27,7 @@ const Header = () => {
           <Link to="/register" className="nav-link">
             Register
           </Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
