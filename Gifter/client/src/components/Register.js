@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { register } from "../modules/UserManager";
 
 export const Register = () => {
@@ -8,7 +9,8 @@ export const Register = () => {
   const [bio, setBio] = useState("");
   const [imageurl, setImageurl] = useState("");
 
-  
+  const navigate = useNavigate();
+
   // This function will run when the user has finished filling out the form and clicks submit
   const submitLoginForm = (e) => {
   const newUser = {

@@ -1,19 +1,23 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { login } from "../modules/UserManager";
 
-export const Login = (setIsLoggedIn) => {
+export const Login = ({setIsLoggedIn}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const submitLoginForm = (e) => {
+    e.preventDefault();
+    
   const newLogin = {
    email: email,
    password: password
   }
-    e.preventDefault();
     login(newLogin)
     .then(() =>{
       setIsLoggedIn(true)
+      navigate("/")
     });
   };
 
