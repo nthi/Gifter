@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { login } from "../modules/UserManager";
 
-export const Login = () => {
+export const Login = (setIsLoggedIn) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -11,7 +11,10 @@ export const Login = () => {
    password: password
   }
     e.preventDefault();
-    login(newLogin);
+    login(newLogin)
+    .then(() =>{
+      setIsLoggedIn(true)
+    });
   };
 
   return (

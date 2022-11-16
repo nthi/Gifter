@@ -18,11 +18,11 @@ const ApplicationViews = () => {
       setIsLoggedIn(true)
     }
 
-  }, []);
+  }, [isLoggedIn]);
 
   return (
     <Routes>
-      <Route path="/login" element= {<Login />} />
+      <Route path="/login" element= {<Login setIsLoggedIn={setIsLoggedIn}/>} />
 
     </Routes>
   )
